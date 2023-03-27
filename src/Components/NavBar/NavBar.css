@@ -1,0 +1,56 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    padding: 20px ;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    transition-timing-function:ease-in ;
+    transition: all 0.5s;
+    color: white;
+    align-items: center;
+      
+    
+}
+
+.nav_left{
+    display: flex;
+    width: 160rem;
+    height: 50px;
+    padding-left: 1.2rem;
+    color: white;
+    align-items: center;
+
+}
+.nav_right{
+    display: flex;
+    justify-content: end;
+    width: 1000px;
+    height: 50px;
+    padding-right: 5.2rem;
+    gap: 20px;
+    color: white;
+    align-items: center;
+}
+.nav_content{
+    padding-left: 10rem;
+    gap: 1rem;
+    cursor: pointer;
+    display: flex;
+}
+.nav_black{
+    background-color: #111;
+}
+.logo{
+    position: fixed;
+    left: 60px;
+    width: 100px;
+
+}
+.avatar{
+    position: fixed;
+    right: 60px;
+    width: 30px;
+}
