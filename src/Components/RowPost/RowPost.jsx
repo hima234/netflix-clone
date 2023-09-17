@@ -7,12 +7,13 @@ import {API_KEY} from '../../constants/constants'
 function RowPost(props) {
   const [movies,setMovies] =useState([]);
   const [urlid,setUrlId]=useState('')
+
   useEffect(()=>{
     axios.get(props.url).then(response=>{
       
       setMovies(response.data.results);
     })
-  },[])
+  },[props.url])
   const opts = {
     height: '390',
     width: '100%',
@@ -38,8 +39,8 @@ const handleMovieTrailer =(id)=>{
     <div className='row'>
       <h2>{props.title}</h2>
       <div className="posters">
-        {movies.map((obj)=>
-          <img onClick={()=>handleMovieTrailer(obj.id)} className={props.isSmall?'smallPoster' :'poster'} src={`${imageUrl+obj.backdrop_path}`} alt="poster" />
+        {movies.map((obj,index)=>
+          <img key={index} onClick={()=>handleMovieTrailer(obj.id)} className={props.isSmall?'smallPoster' :'poster'} src={`${imageUrl+obj.backdrop_path}`} alt="poster" />
         
         )}
         
